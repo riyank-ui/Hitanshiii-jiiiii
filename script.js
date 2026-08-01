@@ -361,3 +361,42 @@ imageViewer.addEventListener("click", (e) => {
     }
 
 });
+// =================================
+// Grand Finale Confetti
+// =================================
+
+const celebrate = document.getElementById("celebrate");
+
+if (celebrate) {
+
+    celebrate.addEventListener("click", () => {
+
+        if (typeof confetti === "function") {
+
+            confetti({
+                particleCount: 180,
+                spread: 90,
+                origin: { y: 0.6 }
+            });
+
+            setTimeout(() => {
+                confetti({
+                    particleCount: 120,
+                    angle: 60,
+                    spread: 70,
+                    origin: { x: 0 }
+                });
+
+                confetti({
+                    particleCount: 120,
+                    angle: 120,
+                    spread: 70,
+                    origin: { x: 1 }
+                });
+            }, 400);
+
+        }
+
+    });
+
+                       }
