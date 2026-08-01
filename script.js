@@ -209,3 +209,36 @@ if (reasonBtn && reasonText) {
     });
 
 }
+// =================================
+// Relationship Timer
+// =================================
+
+const loveTimer = document.getElementById("loveTimer");
+
+// ❤️ Anniversary Date
+const startDate = new Date("2026-07-24T00:00:00");
+
+function updateLoveTimer() {
+
+    if (!loveTimer) return;
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    loveTimer.innerHTML =
+        `❤️ ${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds ❤️`;
+
+}
+
+updateLoveTimer();
+
+setInterval(updateLoveTimer, 1000);
