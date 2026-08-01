@@ -390,3 +390,14 @@ button:hover{
     z-index:999;
 
     box-shadow:0 10px 25px rgba
+.reason-card{
+    min-height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px 0;
+}
+
+#reasonText{
+    transition:opacity .2s ease;
+}
