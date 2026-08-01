@@ -168,3 +168,225 @@ button:hover{
     }
 
   }
+/* ==========================
+   Floating Hearts
+========================== */
+
+.floating-hearts,
+.petals{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.floating-hearts::before,
+.floating-hearts::after{
+    content:"❤️";
+    position:absolute;
+    font-size:24px;
+    animation:heartFloat 12s linear infinite;
+    opacity:.4;
+}
+
+.floating-hearts::before{
+    left:12%;
+    animation-delay:0s;
+}
+
+.floating-hearts::after{
+    right:15%;
+    animation-delay:5s;
+}
+
+@keyframes heartFloat{
+
+    0%{
+        transform:translateY(100vh) scale(.6);
+        opacity:0;
+    }
+
+    20%{
+        opacity:.5;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(1.3);
+        opacity:0;
+    }
+
+}
+
+/* ==========================
+   Falling Petals
+========================== */
+
+.petals::before,
+.petals::after{
+
+    content:"🌸";
+
+    position:absolute;
+
+    font-size:28px;
+
+    animation:petalFall 14s linear infinite;
+
+}
+
+.petals::before{
+
+    left:25%;
+
+}
+
+.petals::after{
+
+    right:20%;
+
+    animation-delay:7s;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:translateY(-100px) rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:translateY(110vh) rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+   Gallery
+========================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+    margin:25px 0;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.05) rotate(2deg);
+
+}
+
+/* ==========================
+   Timer
+========================== */
+
+#loveTimer{
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    margin:25px 0;
+
+}
+
+/* ==========================
+   Gift Box
+========================== */
+
+#giftBox{
+
+    font-size:90px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+}
+
+#giftBox:hover{
+
+    transform:scale(1.15) rotate(8deg);
+
+}
+
+/* ==========================
+   Big Heart
+========================== */
+
+.bigHeart{
+
+    font-size:90px;
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+/* ==========================
+   Music Button
+========================== */
+
+#musicBtn{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    font-size:24px;
+
+    z-index:999;
+
+    box-shadow:0 10px 25px rgba
