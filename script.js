@@ -155,7 +155,7 @@ function startTypewriter() {
 
             letterIndex++;
 
-            setTimeout(type,40);
+            setTimeout(type, 40);
 
         }
 
@@ -163,4 +163,4 @@ function startTypewriter() {
 
     type();
 
-                }
+}
