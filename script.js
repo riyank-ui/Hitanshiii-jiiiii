@@ -242,3 +242,28 @@ function updateLoveTimer() {
 updateLoveTimer();
 
 setInterval(updateLoveTimer, 1000);
+// =================================
+// Gift Box
+// =================================
+
+const giftBox = document.getElementById("giftBox");
+const giftMessage = document.getElementById("giftMessage");
+
+if (giftBox && giftMessage) {
+
+    giftBox.addEventListener("click", () => {
+
+        giftBox.textContent = "🎉";
+
+        giftMessage.innerHTML = `
+        <h2>For My Favorite Person ❤️</h2>
+        <p>
+        Thank You for filling my life with happiness, laughter,
+        and so much love. I hope this little website made You smile.
+        Happy Girlfriend's Day, Hitanshiii Jiiii! 🌷❤️
+        </p>
+        `;
+
+    });
+
+}
