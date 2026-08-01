@@ -325,3 +325,39 @@ document.addEventListener("click", function(e){
     }, 1500);
 
 });
+// =================================
+// Full Screen Gallery
+// =================================
+
+const galleryImages = document.querySelectorAll(".gallery-grid img");
+const imageViewer = document.getElementById("imageViewer");
+const viewerImage = document.getElementById("viewerImage");
+const closeViewer = document.getElementById("closeViewer");
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        viewerImage.src = img.src;
+
+        imageViewer.style.display = "flex";
+
+    });
+
+});
+
+closeViewer.addEventListener("click", () => {
+
+    imageViewer.style.display = "none";
+
+});
+
+imageViewer.addEventListener("click", (e) => {
+
+    if(e.target === imageViewer){
+
+        imageViewer.style.display = "none";
+
+    }
+
+});
