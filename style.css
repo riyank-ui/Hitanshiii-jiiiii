@@ -401,3 +401,16 @@ button:hover{
 #reasonText{
     transition:opacity .2s ease;
 }
+#loveTimer{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    text-shadow:0 0 10px rgba(255,255,255,.5);
+
+    margin:25px 0;
+
+}
