@@ -164,3 +164,48 @@ function startTypewriter() {
     type();
 
 }
+// =================================
+// Reasons I Love You
+// =================================
+
+const reasons = [
+    "❤️ Your smile brightens my darkest days.",
+    "🌸 You make ordinary moments feel magical.",
+    "🥹 You always know how to make me smile.",
+    "💖 Your kindness inspires me.",
+    "🌷 I feel at peace whenever I'm talking to You.",
+    "✨ Your laugh is my favorite sound.",
+    "🤍 You make my heart feel at home.",
+    "🌹 Every day with You is a new adventure.",
+    "💕 You make me want to become a better person.",
+    "❤️ Because You're simply You."
+];
+
+const reasonText = document.getElementById("reasonText");
+const reasonBtn = document.getElementById("reasonBtn");
+
+let reasonIndex = 0;
+
+if (reasonBtn && reasonText) {
+
+    reasonBtn.addEventListener("click", () => {
+
+        reasonText.style.opacity = "0";
+
+        setTimeout(() => {
+
+            reasonText.textContent = reasons[reasonIndex];
+
+            reasonText.style.opacity = "1";
+
+            reasonIndex++;
+
+            if (reasonIndex >= reasons.length) {
+                reasonIndex = 0;
+            }
+
+        }, 200);
+
+    });
+
+}
