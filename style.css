@@ -1,0 +1,170 @@
+/* ==========================
+   Google Font Base
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffd6e8,#fff0f7,#ffe6f2);
+    color:white;
+    height:100vh;
+}
+
+/* ==========================
+   Screen
+========================== */
+
+.screen{
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:scale(.97);
+
+    transition:.8s;
+}
+
+.screen.active{
+    opacity:1;
+    visibility:visible;
+    transform:scale(1);
+}
+
+/* ==========================
+   Glass Card
+========================== */
+
+.glass{
+
+    width:min(92%,700px);
+
+    background:rgba(255,255,255,.16);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:28px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.18);
+
+}
+
+/* ==========================
+   Typography
+========================== */
+
+h1{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+    color:white;
+
+}
+
+h2{
+
+    margin-top:10px;
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+
+}
+
+p{
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================
+   Buttons
+========================== */
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    background:white;
+
+    color:#ff4f91;
+
+    transition:.35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+}
+
+/* ==========================
+   Loader
+========================== */
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    border:6px solid rgba(255,255,255,.3);
+
+    border-top:6px solid white;
+
+    margin:30px auto;
+
+    animation:spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+  }
