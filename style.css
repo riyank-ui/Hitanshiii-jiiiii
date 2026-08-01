@@ -584,3 +584,54 @@ button:hover{
     }
 
 }
+/* ==========================
+   Full Screen Image Viewer
+========================== */
+
+#imageViewer{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    backdrop-filter:blur(8px);
+
+}
+
+#viewerImage{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+
+}
+
+#closeViewer{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    font-size:30px;
+
+    color:white;
+
+    cursor:pointer;
+
+}
