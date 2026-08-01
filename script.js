@@ -106,3 +106,61 @@ if (musicBtn && piano) {
     });
 
 }
+// =================================
+// Typewriter Love Letter
+// =================================
+
+const loveLetter = `
+
+My Dearest Hitanshiii Jiiii ❤️,
+
+Happy Girlfriend's Day!
+
+I don't know if words will ever be enough to tell You how much You mean to me, but I wanted to make something with my own hands because You deserve something special.
+
+Every conversation with You, every smile, every little memory has become a beautiful part of my life.
+
+Thank You for being You.
+
+Thank You for making my days brighter.
+
+No matter where life takes us, I hope we continue creating beautiful memories together.
+
+I Love You today,
+tomorrow,
+and every day after that.
+
+❤️
+Forever Yours,
+Riyank
+
+`;
+
+const typewriter = document.getElementById("typewriter");
+
+let letterIndex = 0;
+let typingStarted = false;
+
+function startTypewriter() {
+
+    if (!typewriter || typingStarted) return;
+
+    typingStarted = true;
+
+    function type() {
+
+        if (letterIndex < loveLetter.length) {
+
+            typewriter.textContent += loveLetter.charAt(letterIndex);
+
+            letterIndex++;
+
+            setTimeout(type,40);
+
+        }
+
+    }
+
+    type();
+
+                }
