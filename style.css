@@ -460,3 +460,90 @@ button:hover{
     }
 
 }
+/* ==========================
+   Corner Flowers
+========================== */
+
+.corner{
+    position:fixed;
+    font-size:38px;
+    z-index:1000;
+    pointer-events:none;
+    animation:floatFlower 4s ease-in-out infinite;
+}
+
+.top-left{
+    top:20px;
+    left:20px;
+}
+
+.top-right{
+    top:20px;
+    right:20px;
+}
+
+.bottom-left{
+    bottom:20px;
+    left:20px;
+}
+
+.bottom-right{
+    bottom:20px;
+    right:20px;
+}
+
+@keyframes floatFlower{
+
+    0%,100%{
+        transform:translateY(0px) rotate(0deg);
+    }
+
+    50%{
+        transform:translateY(-10px) rotate(3deg);
+    }
+
+}
+
+/* ==========================
+   Sparkles
+========================== */
+
+.sparkles::before,
+.sparkles::after{
+
+    content:"✨";
+
+    position:fixed;
+
+    font-size:20px;
+
+    animation:sparkle 6s linear infinite;
+
+    opacity:.6;
+
+}
+
+.sparkles::before{
+    left:30%;
+    top:20%;
+}
+
+.sparkles::after{
+    right:25%;
+    bottom:30%;
+    animation-delay:3s;
+}
+
+@keyframes sparkle{
+
+    0%,100%{
+        transform:scale(.8);
+        opacity:.2;
+    }
+
+    50%{
+        transform:scale(1.3);
+        opacity:1;
+    }
+
+}
