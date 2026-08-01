@@ -301,3 +301,27 @@ if (celebrateBtn && finalMessage) {
     });
 
     }
+// =================================
+// Hearts on Tap
+// =================================
+
+document.addEventListener("click", function(e){
+
+    const heart = document.createElement("div");
+
+    heart.className = "tap-heart";
+
+    const hearts = ["❤️","💖","💕","💗"];
+
+    heart.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 1500);
+
+});
