@@ -547,3 +547,40 @@ button:hover{
     }
 
 }
+/* ==========================
+   Tap Hearts
+========================== */
+
+.tap-heart{
+
+    position:fixed;
+
+    font-size:24px;
+
+    pointer-events:none;
+
+    animation:heartPop 1.5s ease forwards;
+
+    z-index:9999;
+
+}
+
+@keyframes heartPop{
+
+    0%{
+
+        opacity:1;
+
+        transform:translate(-50%,-50%) scale(.5);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translate(-50%,-180px) scale(1.6);
+
+    }
+
+}
