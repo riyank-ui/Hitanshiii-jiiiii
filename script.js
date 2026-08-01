@@ -267,3 +267,37 @@ if (giftBox && giftMessage) {
     });
 
 }
+// =================================
+// Final Surprise
+// =================================
+
+const celebrateBtn = document.getElementById("celebrate");
+const finalMessage = document.getElementById("finalMessage");
+
+if (celebrateBtn && finalMessage) {
+
+    celebrateBtn.addEventListener("click", () => {
+
+        finalMessage.innerHTML = `
+        🌷<br><br>
+
+        Happy Girlfriend's Day, Hitanshiii Jiiii ❤️<br><br>
+
+        Thank You for loving me, supporting me,
+        and making my life so beautiful.<br><br>
+
+        I hope every time You remember today,
+        You remember how deeply You are loved.<br><br>
+
+        ❤️ Forever Yours,<br>
+        Riyank ❤️
+        `;
+
+        // Simple celebration effect
+        document.body.style.transition = "1s";
+        document.body.style.background =
+        "linear-gradient(135deg,#ffb6d9,#ffd6ea,#fff5fb)";
+
+    });
+
+    }
